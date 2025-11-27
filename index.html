@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Li Ming | AI Researcher</title>
+    <title>Portfolio | My Journey</title>
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Lucide Icons -->
@@ -56,14 +56,12 @@
             transform: translateY(0);
         }
 
-        /* Card Hover Glow */
-        .tech-card {
-            transition: all 0.3s ease;
+        /* Timeline Specific Styles */
+        .timeline-img {
+            transition: transform 0.5s ease;
         }
-        .tech-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 0 20px rgba(34, 211, 238, 0.15);
-            border-color: rgba(34, 211, 238, 0.4);
+        .timeline-card:hover .timeline-img {
+            transform: scale(1.05);
         }
     </style>
     
@@ -92,24 +90,20 @@
     <!-- Navigation -->
     <nav class="fixed top-0 w-full z-50 backdrop-blur-md border-b border-white/10 bg-slate-950/70">
         <div class="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
-            <a href="#" class="text-xl font-bold tracking-tight text-white font-mono">LM<span class="text-cyan-400">.ai</span></a>
+            <a href="#" class="text-xl font-bold tracking-tight text-white font-mono">Me<span class="text-cyan-400">.log</span></a>
             
             <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="#about" class="hover:text-cyan-400 transition-colors">About Me</a>
-                <a href="#research" class="hover:text-cyan-400 transition-colors">Research</a>
-                <a href="#publications" class="hover:text-cyan-400 transition-colors">Publications</a>
-                <a href="#projects" class="hover:text-cyan-400 transition-colors">Projects</a>
+                <a href="#about" class="hover:text-cyan-400 transition-colors">About</a>
+                <a href="#timeline" class="hover:text-cyan-400 transition-colors">My Journey</a>
+                <a href="#contact" class="hover:text-cyan-400 transition-colors">Contact</a>
             </div>
 
             <div class="flex items-center space-x-4">
                 <a href="#" class="p-2 hover:bg-white/10 rounded-full transition-colors" title="GitHub">
                     <i data-lucide="github" class="w-5 h-5"></i>
                 </a>
-                <a href="#" class="p-2 hover:bg-white/10 rounded-full transition-colors" title="Google Scholar">
-                    <i data-lucide="graduation-cap" class="w-5 h-5"></i>
-                </a>
                 <a href="#contact" class="hidden md:block px-4 py-2 bg-white/10 hover:bg-white/20 text-white text-xs rounded-full border border-white/10 transition-colors">
-                    Contact
+                    Get in Touch
                 </a>
             </div>
         </div>
@@ -126,7 +120,7 @@
                     <div class="absolute -inset-1 bg-gradient-to-r from-cyan-400 to-purple-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-1000"></div>
                     <div class="relative w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-2 border-white/10 bg-slate-900 flex items-center justify-center">
                         <!-- Placeholder for User Image -->
-                        <img src="Yueqianji_Chen.jpg" alt="Avatar" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-500">
+                        <img src="Yueqianji_Chen.jpg" alt="Yueqianji Chen" class="w-full h-full object-cover opacity-90 hover:scale-105 transition duration-500">
                     </div>
                 </div>
 
@@ -137,184 +131,286 @@
                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-cyan-400 opacity-75"></span>
                           <span class="relative inline-flex rounded-full h-2 w-2 bg-cyan-500"></span>
                         </span>
-                        Open for Collaboration
+                        Open for Research Collaboration
                     </div>
                     <h1 class="text-4xl md:text-6xl font-bold mb-4 text-white tracking-tight">
-                        Hi, I'm <span class="text-gradient">Li Ming</span>
+                        Hi, I'm <span class="text-gradient">Yueqianji Chen</span>
                     </h1>
                     <p class="text-xl text-slate-400 mb-6 leading-relaxed">
-                        Deep Learning Researcher & Algorithm Engineer.
-                        <br>
-                        Dedicated to <span class="text-slate-200">Computer Vision</span> and <span class="text-slate-200">Generative AI</span> exploration.
-                        Empowering machines to not only "see", but also "understand" and "create".
+                        Data Science Master's Graduate from Durham University.<br>
+                        Specializing in <span class="text-slate-200">Computer Vision</span>, <span class="text-slate-200">Multimodal Learning</span>, and <span class="text-slate-200">Computational Modeling</span>.
                     </p>
                     <div class="flex flex-wrap gap-3 justify-center md:justify-start">
-                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-xs text-slate-400 font-mono">Python</span>
                         <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-xs text-slate-400 font-mono">PyTorch</span>
-                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-xs text-slate-400 font-mono">TensorFlow</span>
-                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-xs text-slate-400 font-mono">CUDA</span>
+                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-xs text-slate-400 font-mono">Unity & LLM</span>
+                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-xs text-slate-400 font-mono">GNN</span>
+                        <span class="px-3 py-1 bg-slate-800 border border-slate-700 rounded text-xs text-slate-400 font-mono">FastAPI</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Research Interest -->
-        <section id="research" class="max-w-4xl mx-auto px-6 mb-32 reveal">
-            <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="microscope" class="text-cyan-400"></i> Research Interests
+        <!-- Timeline Journey Section -->
+        <section id="timeline" class="max-w-6xl mx-auto px-6 mb-32 reveal">
+            <h2 class="text-3xl font-bold text-white mb-16 text-center flex items-center justify-center gap-3">
+                <i data-lucide="history" class="text-cyan-400"></i> My Journey
             </h2>
-            <div class="grid md:grid-cols-3 gap-6">
-                <div class="p-6 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-cyan-500/30 transition-colors">
-                    <div class="w-10 h-10 bg-blue-900/30 rounded-lg flex items-center justify-center text-blue-400 mb-4">
-                        <i data-lucide="eye"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-slate-200 mb-2">Computer Vision</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Focusing on image semantic segmentation, object detection, and weak supervision in medical imaging.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-purple-500/30 transition-colors">
-                    <div class="w-10 h-10 bg-purple-900/30 rounded-lg flex items-center justify-center text-purple-400 mb-4">
-                        <i data-lucide="brain-circuit"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-slate-200 mb-2">Multimodal Large Models</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Researching alignment techniques for vision-language models to enhance reasoning capabilities in complex scenarios.</p>
-                </div>
-                <div class="p-6 rounded-2xl bg-slate-900/50 border border-white/5 hover:border-green-500/30 transition-colors">
-                    <div class="w-10 h-10 bg-green-900/30 rounded-lg flex items-center justify-center text-green-400 mb-4">
-                        <i data-lucide="cpu"></i>
-                    </div>
-                    <h3 class="text-lg font-semibold text-slate-200 mb-2">Model Compression & Deployment</h3>
-                    <p class="text-sm text-slate-400 leading-relaxed">Exploring knowledge distillation and quantization to achieve real-time, efficient AI inference on edge devices.</p>
-                </div>
-            </div>
-        </section>
 
-        <!-- Publications -->
-        <section id="publications" class="max-w-4xl mx-auto px-6 mb-32 reveal">
-            <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="scroll-text" class="text-cyan-400"></i> Selected Publications
-            </h2>
-            <div class="space-y-6">
-                <!-- Paper 1 -->
-                <div class="group relative p-6 rounded-2xl bg-slate-900/40 border border-white/5 hover:bg-slate-800/40 transition-all">
-                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
-                        <div>
-                            <h3 class="text-lg font-semibold text-slate-200 group-hover:text-cyan-300 transition-colors">
-                                Efficient Transformers for High-Resolution Image Synthesis
-                            </h3>
-                            <p class="text-slate-400 text-sm mt-1">
-                                <span class="text-white">Li Ming</span>, Zhang Wei, et al.
+            <!-- Vertical Timeline -->
+            <div class="relative wrap overflow-hidden p-10 h-full">
+                <!-- Vertical Line -->
+                <div class="border-2-2 absolute border-opacity-20 border-cyan-500 h-full border left-1/2 -translate-x-1/2 hidden md:block"></div>
+                <!-- Mobile Vertical Line -->
+                <div class="border-2-2 absolute border-opacity-20 border-cyan-500 h-full border left-10 md:hidden"></div>
+
+                <!-- Node 1: Nov 2025 - Present (Human-Agent Collaboration) -->
+                <div class="mb-16 flex justify-between items-center w-full right-timeline flex-row-reverse md:flex-row reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-cyan-500 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-900">Now</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-cyan-500/30 transition-all">
+                            <span class="font-mono text-cyan-400 text-sm mb-2 block">Nov 2025 - Present • Research</span>
+                            <h3 class="font-bold text-xl text-white mb-3">Multimodal Human-Agent Collaboration</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Supervised by Prof. Yanjie Su at Peking University.
+                                <br><br>
+                                Developing a <strong>3D Virtual Classroom</strong> in Unity where autonomous agents use LLM Function Calling for adaptive strategies. Building a synchronized pipeline for <strong>fMRI & Eye-tracking</strong> to analyze dyadic decision-making.
                             </p>
-                            <p class="text-slate-500 text-sm mt-2 italic">CVPR 2024 (Oral Presentation)</p>
-                            <p class="mt-4 text-sm text-slate-400 max-w-2xl">
-                                Proposed a novel sparse attention mechanism that reduces computational complexity by 40% while maintaining image generation quality.
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Diagram: GNN Framework & Unity Agent Interaction]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1617839625591-e5a789593135?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="Virtual Environment">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node 2: Sep 2025 - Present (High-Altitude Motor Control) -->
+                <div class="mb-16 flex justify-between items-center w-full left-timeline flex-row-reverse md:flex-row-reverse reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-300">25</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-purple-500/30 transition-all">
+                            <span class="font-mono text-purple-400 text-sm mb-2 block">Sep 2025 - Present • Lead Developer</span>
+                            <h3 class="font-bold text-xl text-white mb-3">Deep Learning for Motor Control & EEG</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Institute of Oxygen Supply, Tibet University.
+                                <br><br>
+                                Developed <strong>PressingNet</strong> (CNNs + Performer Transformers + HSMM) to model motor state durations. Achieved <strong>98.4% segmentation accuracy</strong> on tapping waveforms under high-altitude hypoxic conditions.
                             </p>
-                        </div>
-                        <div class="flex gap-2 shrink-0">
-                            <a href="#" class="px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-xs font-mono text-cyan-400 border border-white/5 flex items-center gap-1">
-                                <i data-lucide="file-text" class="w-3 h-3"></i> PDF
-                            </a>
-                            <a href="#" class="px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-xs font-mono text-slate-300 border border-white/5 flex items-center gap-1">
-                                <i data-lucide="code" class="w-3 h-3"></i> Code
-                            </a>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Diagram: PressingNet Architecture & EEG Signals]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1555679427-1f6dfcce943b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="EEG Analysis">
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- Paper 2 -->
-                <div class="group relative p-6 rounded-2xl bg-slate-900/40 border border-white/5 hover:bg-slate-800/40 transition-all">
-                    <div class="flex flex-col md:flex-row justify-between md:items-start gap-4">
-                        <div>
-                            <h3 class="text-lg font-semibold text-slate-200 group-hover:text-cyan-300 transition-colors">
-                                Cross-Modal Alignment in Medical Imaging
-                            </h3>
-                            <p class="text-slate-400 text-sm mt-1">
-                                Wang Jun, <span class="text-white">Li Ming</span>, et al.
+                <!-- Node 3: Jun 2024 - Nov 2025 (ST-DETrack) -->
+                <div class="mb-16 flex justify-between items-center w-full right-timeline flex-row-reverse md:flex-row reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-300">25</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-green-500/30 transition-all">
+                            <span class="font-mono text-green-400 text-sm mb-2 block">Jun 2024 - Nov 2025 • Research Assistant</span>
+                            <h3 class="font-bold text-xl text-white mb-3">ST-DETrack: Plant Canopy Tracking</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Supervised by Dr. Jo Hepworth, Durham University.
+                                <br><br>
+                                Proposed a dual-decoder network with adaptive gating to track plant branches. Achieved <strong>93.6% accuracy</strong> and 0.980 MOTA. Built a semi-automated SIFT annotation system reducing effort by 93%.
+                                <br>
+                                <em class="text-xs text-green-300 block mt-2">Paper: IEEE Transactions on Image Processing (Under Review)</em>
                             </p>
-                            <p class="text-slate-500 text-sm mt-2 italic">MICCAI 2023</p>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Image: Tracking Results on Brassica Napus]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1530836369250-ef7208b5a1b8?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="Plant Tracking">
+                            </div>
                         </div>
-                        <div class="flex gap-2 shrink-0">
-                            <a href="#" class="px-3 py-1.5 rounded bg-white/5 hover:bg-white/10 text-xs font-mono text-cyan-400 border border-white/5 flex items-center gap-1">
-                                <i data-lucide="file-text" class="w-3 h-3"></i> PDF
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-6 text-center">
-                <a href="#" class="inline-flex items-center gap-2 text-sm text-slate-500 hover:text-cyan-400 transition-colors">
-                    View Full List <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                </a>
-            </div>
-        </section>
-
-        <!-- Projects -->
-        <section id="projects" class="max-w-4xl mx-auto px-6 mb-32 reveal">
-            <h2 class="text-2xl font-bold text-white mb-8 flex items-center gap-3">
-                <i data-lucide="terminal-square" class="text-cyan-400"></i> Projects Showcase
-            </h2>
-            <div class="grid md:grid-cols-2 gap-6">
-                <!-- Project 1 -->
-                <div class="tech-card rounded-2xl bg-slate-900 border border-white/10 overflow-hidden group">
-                    <div class="h-48 overflow-hidden relative">
-                        <!-- Overlay -->
-                        <div class="absolute inset-0 bg-slate-900/50 group-hover:bg-slate-900/20 transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project AI" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
-                    </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">NeuroStyle Transfer</h3>
-                        <p class="text-sm text-slate-400 mb-4 h-10 line-clamp-2">
-                            Real-time video style transfer system based on PyTorch, supporting 60FPS inference at 4K resolution.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">GANs</span>
-                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">C++</span>
-                            <span class="text-xs px-2 py-1 rounded bg-blue-500/10 text-blue-400 border border-blue-500/20">ONNX</span>
-                        </div>
-                        <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors">
-                            View on GitHub <i data-lucide="external-link" class="w-4 h-4"></i>
-                        </a>
                     </div>
                 </div>
 
-                <!-- Project 2 -->
-                <div class="tech-card rounded-2xl bg-slate-900 border border-white/10 overflow-hidden group">
-                    <div class="h-48 overflow-hidden relative">
-                        <div class="absolute inset-0 bg-slate-900/50 group-hover:bg-slate-900/20 transition-all z-10"></div>
-                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Project Chat" class="w-full h-full object-cover group-hover:scale-110 transition duration-700">
+                <!-- Node 4: Nov 2024 - May 2025 (Moral Impression) -->
+                <div class="mb-16 flex justify-between items-center w-full left-timeline flex-row-reverse md:flex-row-reverse reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-300">24</h1>
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-slate-100 mb-2">Medical Rag Bot</h3>
-                        <p class="text-sm text-slate-400 mb-4 h-10 line-clamp-2">
-                            Medical QA assistant built with RAG technology, connected to the latest medical literature databases.
-                        </p>
-                        <div class="flex flex-wrap gap-2 mb-6">
-                            <span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">LLM</span>
-                            <span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">LangChain</span>
-                            <span class="text-xs px-2 py-1 rounded bg-purple-500/10 text-purple-400 border border-purple-500/20">VectorDB</span>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-yellow-500/30 transition-all">
+                            <span class="font-mono text-yellow-400 text-sm mb-2 block">Nov 2024 - May 2025 • Independent Research</span>
+                            <h3 class="font-bold text-xl text-white mb-3">Transformer Modeling of Moral Updating</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Designed a <strong>Transformer-based encoder-decoder</strong> to simulate cognitive impression updates in adolescents. Visualized attention heatmaps to reveal structural shifts from rigid focus to adaptive integration.
+                                <br>
+                                <em class="text-xs text-yellow-300 block mt-2">Pub: Developmental Science (In Revision)</em>
+                            </p>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Image: Attention Heatmaps Visualization]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1507146153580-69a1fe6d8aa1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="Data Visualization">
+                            </div>
                         </div>
-                        <a href="#" class="inline-flex items-center gap-2 text-sm font-medium text-white hover:text-cyan-400 transition-colors">
-                            View Demo <i data-lucide="external-link" class="w-4 h-4"></i>
-                        </a>
                     </div>
                 </div>
+
+                <!-- Node 5: May 2024 - Sep 2025 (Social RL) -->
+                <div class="mb-16 flex justify-between items-center w-full right-timeline flex-row-reverse md:flex-row reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-300">24</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-blue-500/30 transition-all">
+                            <span class="font-mono text-blue-400 text-sm mb-2 block">May 2024 - Sep 2025 • Independent Research</span>
+                            <h3 class="font-bold text-xl text-white mb-3">Computational Social RL Modeling</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Processed 13,600+ trials using a dual-parameter <strong>Rescorla-Wagner model</strong>. Used Latent Profile Analysis (LPA) to map learning phenotypes and identified "Global Blunting" as a predictor for maladaptation.
+                            </p>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Image: LPA/LTA Analysis Charts]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="Data Analytics">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node 6: Education (Durham) -->
+                <div class="mb-16 flex justify-between items-center w-full left-timeline flex-row-reverse md:flex-row-reverse reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-400">23</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-purple-500/30 transition-all">
+                            <span class="font-mono text-purple-400 text-sm mb-2 block">Sep 2023 - Sep 2024 • Education</span>
+                            <h3 class="font-bold text-xl text-white mb-3">MSc in Data Science, Durham University</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                <strong>Distinction</strong> (Outstanding Achievement).
+                                <br>
+                                Dissertation: Multimodal Deep learning method for modelling Brassica napus growth (Ranked 1st, 92/100).
+                                <br>
+                                Key Courses: Machine Learning, Data Visualization, Computer Music.
+                            </p>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Image: Durham University / Graduation Photo]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1541339907198-e08756dedf3f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="University">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node 7: WeCampus -->
+                <div class="mb-16 flex justify-between items-center w-full right-timeline flex-row-reverse md:flex-row reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-400">21</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-cyan-500/30 transition-all">
+                            <span class="font-mono text-cyan-400 text-sm mb-2 block">May 2021 - Mar 2023 • Co-Founder & Tech Lead</span>
+                            <h3 class="font-bold text-xl text-white mb-3">WeCampus Startup</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Architected a distributed microservices system (FastAPI + SpringCloud) serving <strong>100,000+ students</strong> across 10 universities. Led CI/CD pipelines and a 3-person engineering team.
+                                <br>
+                                <em class="text-xs text-slate-500 mt-2 block">Acquired Software Copyrights</em>
+                            </p>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Image: WeCampus App Interface / Architecture]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1551434678-e076c223a692?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="App Development">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node 8: CloudLeap Prime -->
+                <div class="mb-16 flex justify-between items-center w-full left-timeline flex-row-reverse md:flex-row-reverse reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-400">21</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-blue-500/30 transition-all">
+                            <span class="font-mono text-blue-400 text-sm mb-2 block">May 2021 - Nov 2022 • Technical Director</span>
+                            <h3 class="font-bold text-xl text-white mb-3">CloudLeap Prime: Dining Platform</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Implemented <strong>Graph Convolutional Networks (GCN)</strong> for personalized recommendations. Deployed Neo4j for relationship storage and optimized model training to increase purchase rates by 25%.
+                            </p>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Image: Recommendation System / Graph Data]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="Dining Platform">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Node 9: Education (North University of China) -->
+                <div class="mb-16 flex justify-between items-center w-full right-timeline flex-row-reverse md:flex-row reveal">
+                    <div class="order-1 w-5/12 hidden md:block"></div>
+                    <div class="z-20 flex items-center order-1 bg-slate-800 shadow-xl w-10 h-10 rounded-full justify-center shrink-0 md:mx-0 absolute left-5 md:static md:relative border-2 border-slate-700">
+                        <h1 class="mx-auto font-semibold text-lg text-slate-500">18</h1>
+                    </div>
+                    <div class="order-1 w-full md:w-5/12 pl-16 md:pl-0">
+                        <div class="timeline-card bg-slate-900/60 border border-white/10 rounded-2xl p-6 shadow-xl hover:border-slate-500/30 transition-all">
+                            <span class="font-mono text-slate-400 text-sm mb-2 block">Sep 2018 - Jun 2022 • Education</span>
+                            <h3 class="font-bold text-xl text-white mb-3">BEng, North University of China</h3>
+                            <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+                                Excellent Graduation Thesis (Ranked 1st): RFID Electronic Tags in Logistics.
+                                <br>
+                                Key Courses: C/C++ Programming (100/100), Advanced Mathematics, Electronic Technology.
+                            </p>
+                            <div class="rounded-xl overflow-hidden border border-white/5 bg-black/20 h-48 relative group">
+                                <div class="absolute inset-0 flex items-center justify-center bg-slate-900/50 text-slate-500 text-xs text-center px-4">
+                                    [Image: Graduation / Campus]
+                                </div>
+                                <img src="https://images.unsplash.com/photo-1562774053-701939374585?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" class="timeline-img w-full h-full object-cover opacity-60 group-hover:opacity-90" alt="Undergraduate">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <!-- Contact / Footer -->
         <section id="contact" class="max-w-2xl mx-auto px-6 text-center reveal">
             <div class="p-8 rounded-3xl bg-gradient-to-b from-slate-900 to-slate-950 border border-white/10">
-                <h2 class="text-2xl font-bold text-white mb-4">Interested in collaboration?</h2>
+                <h2 class="text-2xl font-bold text-white mb-4">Let's Connect</h2>
                 <p class="text-slate-400 mb-8">
-                    I am always open to interesting research topics and engineering challenges.<br>Feel free to contact me via email.
+                    I'm currently open to new opportunities in AI Research and Engineering.<br>
+                    Feel free to reach out for collaborations.
                 </p>
-                <a href="mailto:contact@example.com" class="inline-flex items-center justify-center px-8 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium transition-all hover:scale-105 shadow-lg shadow-cyan-500/20">
-                    <i data-lucide="mail" class="w-4 h-4 mr-2"></i> Send Email
-                </a>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="Chinese_Resume_Template_英文简历模板_ (3).pdf" target="_blank" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-white/5 hover:bg-white/10 text-white font-medium transition-all border border-white/10">
+                        <i data-lucide="file-text" class="w-4 h-4 mr-2"></i> Resume PDF
+                    </a>
+                    <a href="mailto:chenyueqianji@outlook.com" class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-cyan-600 hover:bg-cyan-500 text-white font-medium transition-all hover:scale-105 shadow-lg shadow-cyan-500/20">
+                        <i data-lucide="mail" class="w-4 h-4 mr-2"></i> chenyueqianji@outlook.com
+                    </a>
+                </div>
             </div>
             
             <footer class="mt-20 pt-8 border-t border-white/5 text-slate-600 text-sm">
-                <p>&copy; 2024 Li Ming. All rights reserved.</p>
-                <p class="mt-2 text-xs">Built with Tailwind & Passion for AI.</p>
+                <p>&copy; 2025 Yueqianji Chen. Built with Passion for AI.</p>
             </footer>
         </section>
 
